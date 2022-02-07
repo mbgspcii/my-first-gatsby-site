@@ -1,30 +1,38 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react'
 import Layout from '../components/layout';
-import { poster, posterContainer } from './index.module.css';
+import { samples, item, poster, styleDriven } from './index.module.css';
 import { TwicImg } from "@twicpics/components/react";
-
-console.log('pipo');
 
 const IndexPage = () => {
     return (
         <Layout pageTitle='Home Page'>
-            <p>I'm making this following the Gatsby Tutorial.</p>
-            <div className={posterContainer}>
-                <StaticImage
-                    alt="Poster of the movie Bladerunner 1982 - StaticImage"
-                    src="https://izbd9vu9.twic.pics/tmdb-assets/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
-                />
-                <img className={poster}
-                    src="https://izbd9vu9.twic.pics/tmdb-assets/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
-                    alt="Poster of the movie Bladerunner 1982 - native image"
-                />
-                <TwicImg
-                    src="tmdb-assets/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
-                    ratio="120/160"
-                    alt="Poster of the movie Bladerunner 1982 - twic image"
-                    mode='contain'
-                />
+            <p>POC : TwicPics implementation in Gatsby</p>
+            <div className={samples}>
+                <div className={item}>
+                    <StaticImage
+                        alt="Poster of the movie Bladerunner 1982 - StaticImage"
+                        src="https://image.tmdb.org/t/p/original/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
+                    />
+                    <span>StaticImage (Gatsby)</span>
+                </div>
+                <div className={item}>
+                    <img className={poster}
+                        src="https://image.tmdb.org/t/p/original/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
+                        alt="Poster of the movie Bladerunner 1982 - native image"
+                    />
+                    <span>Native img but through TwicPics</span>
+                </div>
+                <div className={item}>
+                    <TwicImg
+                        className={styleDriven}
+                        src="https://image.tmdb.org/t/p/original/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
+                        ratio="2/3"
+                        alt="Poster of the movie Bladerunner 1982 - twic image"
+                        mode='contain'
+                    />
+                    <span>TwicPics component</span>
+                </div>
             </div>
         </Layout>
     );

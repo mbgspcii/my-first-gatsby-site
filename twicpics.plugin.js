@@ -5,5 +5,3 @@ installTwicPics({
      // domain is mandatory
     "domain": "https://izbd9vu9.twic.pics"
 });
-
-console.log('pipo');
