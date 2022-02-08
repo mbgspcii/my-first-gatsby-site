@@ -1,10 +1,10 @@
 import * as React from "react"
+import Layout from '../components/layout';
 
 const TutoPage = ({ serverData }) => (
-  <main>
-    <h1>SSR Page with Dogs</h1>
+  <Layout pageTitle='The dog'>
     <img alt="Happy dog" src={serverData.message} />
-  </main>
+  </Layout>
 )
 
 export default TutoPage

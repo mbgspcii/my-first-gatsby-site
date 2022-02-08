@@ -8,7 +8,3 @@ export function onClientEntry() {
         "domain": "https://izbd9vu9.twic.pics"
     });
 }
-
-export function onInitialClientRender() {
-    console.log("ReactDOM.render has executed");
-}

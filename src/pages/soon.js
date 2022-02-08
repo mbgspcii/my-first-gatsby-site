@@ -28,10 +28,12 @@ const SoonPage = ({ serverData }) => {
                         </div>
                     ))}
                 </div>
-                <p>StaticImage</p>
+            </div>
+            <div>
+                <p>TwicImg</p>
                 <div className={carousel}>
                     {serverData.results.map((aMovie) => (
-                        <div key={`native-${aMovie.id}`} className={movie} >
+                        <div key={`${aMovie.id}-native`} className={movie} >
                             <img className={native}
                                 src={`https://image.tmdb.org/t/p/original/${aMovie.poster_path}`}
                             />

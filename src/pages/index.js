@@ -21,7 +21,7 @@ const IndexPage = () => {
                         src="https://image.tmdb.org/t/p/original/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
                         alt="Poster of the movie Bladerunner 1982 - native image"
                     />
-                    <span>Native img but through TwicPics</span>
+                    <span>Native img</span>
                 </div>
                 <div className={item}>
                     <TwicImg
