@@ -1,7 +1,6 @@
 import { TwicImg } from "@twicpics/components/react";
-import { StaticImage } from 'gatsby-plugin-image';
 import * as React from "react"
-import { carousel, movie, native } from './comingSoon.module.css';
+import { carousel, movie, native } from './ssr.module.css';
 import Layout from '../components/layout';
 
 const apiKey = `967e0d676315d04866ad552b7a5c2ea1`;
