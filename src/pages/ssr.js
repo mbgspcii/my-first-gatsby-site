@@ -12,7 +12,7 @@ const apiRoute = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}
 &page=1
 &with_watch_monetization_types=flatrate`;
 
-const ComingSoon = ({ serverData }) => {
+const SsrPage = ({ serverData }) => {
     return (
         <Layout pageTitle={'Coming Soon'}>
             <div>
@@ -43,10 +43,11 @@ const ComingSoon = ({ serverData }) => {
     );
 }
 
-export default ComingSoon;
+export default SsrPage;
 
 export async function getServerData() {
     try {
+        console.log(apiRoute);
         const res = await fetch(apiRoute);
         if (!res.ok) {
             throw new Error(`Response failed`)
