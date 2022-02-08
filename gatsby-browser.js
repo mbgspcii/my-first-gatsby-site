@@ -11,5 +11,4 @@ export function onClientEntry() {
 
 export function onInitialClientRender() {
     console.log("ReactDOM.render has executed");
-   
 }
