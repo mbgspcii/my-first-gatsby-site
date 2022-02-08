@@ -12,33 +12,33 @@ const apiRoute = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}
 &page=1
 &with_watch_monetization_types=flatrate`;
 
-const ComingSoon = ({serverData}) => {
+const ComingSoon = ({ serverData }) => {
     return (
         <Layout pageTitle={'Coming Soon'}>
-        <div>
-            <p>TwicImg</p>
-            <div className={carousel}>
-            {serverData.results.map( ( aMovie ) => (
-                <div className={movie} >
-                    <TwicImg 
-                        src={`/tmdb-assets/${aMovie.poster_path}`}
-                        ratio="2/3"
-                        mode="contain"
-                    />
+            <div>
+                <p>TwicImg</p>
+                <div className={carousel}>
+                    {serverData.results.map((aMovie) => (
+                        <div className={movie} >
+                            <TwicImg
+                                src={`/tmdb-assets/${aMovie.poster_path}`}
+                                ratio="2/3"
+                                mode="contain"
+                            />
+                        </div>
+                    ))}
                 </div>
-            ) )}
-            </div>
-            <p>StaticImage</p>
-            <div className={carousel}>
-            {serverData.results.map( ( aMovie ) => (
-                <div className={movie} >
-                    <img className={native}
-                        src={`https://image.tmdb.org/t/p/original/${aMovie.poster_path}`}
-                    />
+                <p>StaticImage</p>
+                <div className={carousel}>
+                    {serverData.results.map((aMovie) => (
+                        <div className={movie} >
+                            <img className={native}
+                                src={`https://image.tmdb.org/t/p/original/${aMovie.poster_path}`}
+                            />
+                        </div>
+                    ))}
                 </div>
-            ) )}
             </div>
-        </div>
         </Layout>
     );
 }

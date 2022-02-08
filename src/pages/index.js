@@ -26,7 +26,7 @@ const IndexPage = () => {
                 <div className={item}>
                     <TwicImg
                         className={styleDriven}
-                        src="https://image.tmdb.org/t/p/original/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
+                        src="/tmdb-assets/zHKWxyG4j404HVeSYHNH4niUpkW.jpg"
                         ratio="2/3"
                         alt="Poster of the movie Bladerunner 1982 - twic image"
                         mode='contain'
