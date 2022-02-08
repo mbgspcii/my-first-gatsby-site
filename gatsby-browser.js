@@ -1,10 +1,6 @@
-import { installTwicPics } from "@twicpics/components/react";
-import "@twicpics/components/style.css";
+import "./twicpics.plugin";
+
 
 export function onClientEntry() {
     console.log("We've started!");
-    installTwicPics({
-        // domain is mandatory
-        "domain": "https://izbd9vu9.twic.pics"
-    });
 }
