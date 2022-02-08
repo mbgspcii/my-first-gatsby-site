@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-const DogPage = () => {
+const AboutV2Page = () => {
     return ( 
-        <Layout pageTitle='Dog Page'>
+        <Layout pageTitle='About me'>
             <p>Hi there! </p>
         </Layout>
 
     );
 }
 
-export default DogPage;
+export default AboutV2Page;
