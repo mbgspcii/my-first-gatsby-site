@@ -19,7 +19,7 @@ const SsrPage = ({ serverData }) => {
                 <p>TwicImg</p>
                 <div className={carousel}>
                     {serverData.results.map((aMovie) => (
-                        <div className={movie} >
+                        <div key={aMovie.id} className={movie} >
                             <TwicImg
                                 src={`/tmdb-assets/${aMovie.poster_path}`}
                                 ratio="2/3"
@@ -31,7 +31,7 @@ const SsrPage = ({ serverData }) => {
                 <p>StaticImage</p>
                 <div className={carousel}>
                     {serverData.results.map((aMovie) => (
-                        <div className={movie} >
+                        <div key={`native-${aMovie.id}`} className={movie} >
                             <img className={native}
                                 src={`https://image.tmdb.org/t/p/original/${aMovie.poster_path}`}
                             />

@@ -1,7 +1,11 @@
 import * as React from "react"
-const DogPage = () => (
-  <main>
-    <h1>SSR Page with Dogs</h1>
-    </main>
-)
-export default DogPage
+import Layout from '../components/layout';
+const DogPage = () => {
+    return ( 
+        <Layout pageTitle='Dog Page'>
+            <p>Hi there! </p>
+        </Layout>
+
+    );
+}
+export default DogPage;
