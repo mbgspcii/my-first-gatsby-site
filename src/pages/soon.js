@@ -30,7 +30,7 @@ const SoonPage = ({ serverData }) => {
                 </div>
             </div>
             <div>
-                <p>TwicImg</p>
+                <p>Native</p>
                 <div className={carousel}>
                     {serverData.results.map((aMovie) => (
                         <div key={`${aMovie.id}-native`} className={movie} >
